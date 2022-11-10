@@ -1,14 +1,26 @@
 ﻿namespace dtp14_console_MyIO
 {
+    /// <summary>
+    /// class <b>MyIO</b> - IO facilities for console programming
+    /// </summary>
     public class MyIO
     {
+        /// <summary>
+        /// <b>Greet</b> - asks the user for a name and greets him/her
+        /// </summary>
         static public void Greet()
         {
             Console.Write("What's your name? ");
             string? name = Console.ReadLine();
             Console.WriteLine($"Hello {name}");
         }
-        static public int IntInput(string prompt)
+        /// <summary>
+        /// <b>IntInput</b> - asks for an integer number by writing
+        /// a prompt, keeps asking till the integer is valid
+        /// </summary>
+        /// <param name="prompt">the prompt string, defaults to "write an integer"</param>
+        /// <returns>the integer provided</returns>
+        static public int IntInput(string prompt = "write an integer")
         {
             do
             {
